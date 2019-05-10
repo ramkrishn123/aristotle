@@ -20,13 +20,15 @@ package ca.luscinia.aristotle.controller;
 
 
 import ca.luscinia.aristotle.model.Login;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+@Controller
 public class DefaultController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/i/", method = RequestMethod.GET)
     public static ModelAndView index() {
         ModelAndView mav = new ModelAndView("index");
         mav.addObject(new Login());
