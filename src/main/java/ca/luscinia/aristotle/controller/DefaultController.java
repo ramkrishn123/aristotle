@@ -28,7 +28,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class DefaultController {
 
-    @RequestMapping(value = "/i/", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public static ModelAndView index() {
         ModelAndView mav = new ModelAndView("index");
         mav.addObject(new Login());
