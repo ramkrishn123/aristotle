@@ -18,5 +18,23 @@
 
 package ca.luscinia.aristotle.model;
 
-public class User {
+public abstract class User {
+    private boolean authenticated;
+    private long index;
+    private String firstName;
+    private String lastName;
+    private long[] courses;
+    private String email;
+    private String passwordHash;
+
+    public User() {
+        authenticated = false;
+    }
+
+    public void setAuthenticated(boolean authenticated) {
+        this.authenticated = authenticated;
+    }
+    public boolean isAuthenticated() {
+        return authenticated;
+    }
 }

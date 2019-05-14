@@ -10,13 +10,12 @@
     </parent>
     <groupId>ca.luscinia</groupId>
     <artifactId>aristotle</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>aristotle</name>
-    <description>Aristotle Education Platform, Created by Luscinia</description>
+    <version>0.0.0-DEVEL</version>
+    <name>Aristotle Education Platform</name>
+    <description>Aristotle Education Platform by Luscinia Enterprises Assn.</description>
 
     <properties>
         <java.version>11</java.version>
-        <spring-boot-admin.version>2.1.4</spring-boot-admin.version>
     </properties>
 
     <dependencies>
@@ -26,23 +25,19 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-core</artifactId>
         </dependency>
 
         <dependency>
@@ -51,8 +46,19 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -61,18 +67,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-dependencies</artifactId>
-                <version>${spring-boot-admin.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>

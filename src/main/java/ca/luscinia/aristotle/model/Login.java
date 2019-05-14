@@ -21,7 +21,55 @@ package ca.luscinia.aristotle.model;
 public class Login {
     private String username;
     private String password;
-    public Login(){
+    private String validate;
 
+    public Login(){}
+    public Login(String username, String password) {
+        username = this.username;
+        password = this.password;
+    }
+    public void validate(User user) {
+        validate = "Student";
+    }
+    public boolean isStudent(Student student) {
+        return this.validate.toLowerCase().equals("student");
+    }
+    public boolean isTeacher(Teacher teacher) {
+        return this.validate.toLowerCase().equals("teacher");
+    }
+    public String processError() {
+        if (validate == null) {
+            return "Incorrect Username and/or Password";
+        }
+        return "An Unknown Error Occurred";
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setValidate(String validate) {
+        this.validate = validate;
+    }
+
+    public String getValidate() {
+        return validate;
+    }
+
+    @Override
+    public String toString() {
+        return getUsername() + ", " + getPassword() + ", error:\"" + getValidate() + "\"";
     }
 }
