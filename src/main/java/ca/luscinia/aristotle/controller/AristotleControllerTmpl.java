@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.Instant;
 import java.util.Date;
 
-public class Controller {
+public abstract class AristotleControllerTmpl {
     public static void attachDebugObjects(ModelAndView modelAndView, HttpServletRequest request) {
         modelAndView.addObject("output", "SAMPLE TEXT FROM CONTROLLER OUTPUT");
         if (request.getSession() != null) {

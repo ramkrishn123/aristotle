@@ -5,7 +5,7 @@ import ca.luscinia.aristotle.model.Teacher;
 
 import javax.servlet.http.HttpSession;
 
-public abstract class AuthenticatedController {
+public abstract class AuthenticatedControllerTmpl extends AristotleControllerTmpl{
     public char isAuthenticated(HttpSession session) {
         String userType = session.getAttribute("userType").toString();
         if (userType == null) {

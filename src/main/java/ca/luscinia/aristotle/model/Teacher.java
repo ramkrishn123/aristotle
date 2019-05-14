@@ -18,5 +18,5 @@
 
 package ca.luscinia.aristotle.model;
 
-public class Teacher {
+public class Teacher extends User{
 }

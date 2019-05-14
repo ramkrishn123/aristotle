@@ -19,10 +19,6 @@
 package ca.luscinia.aristotle.controller;
 
 
-import ca.luscinia.aristotle.model.Login;
-import ca.luscinia.aristotle.model.User;
-
-import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,25 +26,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.time.Instant;
-import java.util.Date;
 
 @Controller
-public class DefaultController {
+public class DefaultController extends AristotleControllerTmpl {
 
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public static ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView modelAndView = new ModelAndView("index");
-        modelAndView.addObject("output", "SAMPLE TEXT FROM CONTROLLER OUTPUT");
-        if (request.getSession() != null) {
-            modelAndView.addObject("SessionID", request.getSession().getId());
-        } else {
-            modelAndView.addObject("SessionID", "null");
-        }
-        modelAndView.addObject("Time", Date.from(Instant.now()).toString());
-        modelAndView.addObject("Host", request.getHeader("Host"));
-        modelAndView.addObject("UserAgent", request.getHeader("User-Agent"));
+        attachDebugObjects(modelAndView, request);
         return modelAndView;
     }
 }

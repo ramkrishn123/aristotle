@@ -21,19 +21,16 @@ package ca.luscinia.aristotle.controller;
 import ca.luscinia.aristotle.model.Login;
 import ca.luscinia.aristotle.model.Student;
 import ca.luscinia.aristotle.model.Teacher;
-import ca.luscinia.aristotle.model.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.View;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
-public class LoginController {
+public class LoginController extends AristotleControllerTmpl{
 
     @RequestMapping(value = "/signin/", method = RequestMethod.GET)
     public static String loginform(HttpServletRequest request, HttpServletResponse response) {
