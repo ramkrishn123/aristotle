@@ -18,5 +18,43 @@
 
 package ca.luscinia.aristotle.database;
 
+import ca.luscinia.aristotle.GetPropertyValues;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
+
+import java.io.IOException;
+import java.sql.*;
+import java.util.Properties;
+
 public class RunStatement {
+    public ResultSet queryUsers(String query) throws IOException {
+        Properties properties = new GetPropertyValues().getPropValues();
+        try {
+            Class.forName(properties.getProperty("db.sql.driver"));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        // create Connection
+        Connection connection;
+        // create Statement
+        Statement statement;
+        // default output to null
+        ResultSet output = null;
+        // query db
+        try {
+            //connect to database using connection and url
+            connection = DriverManager.getConnection("jdbc:" + properties.getProperty("db.sql.engine") +
+                            "://" + properties.getProperty("db.users.url") +
+                            ":" + properties.getProperty("db.users.port") +
+                            "/" + properties.getProperty("db.users.name"),
+                    properties.getProperty("db.users.username"),
+                    properties.getProperty("db.users.password"));
+            //connect statement to new connection
+            statement = connection.createStatement();
+            //execute query and send output to resultset output
+            output = statement.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return output;
+    }
 }

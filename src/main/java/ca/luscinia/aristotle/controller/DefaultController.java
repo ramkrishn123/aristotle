@@ -19,6 +19,7 @@
 package ca.luscinia.aristotle.controller;
 
 
+import ca.luscinia.aristotle.GetPropertyValues;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +27,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Properties;
 
 @Controller
 public class DefaultController extends AristotleControllerTmpl {
@@ -33,7 +35,9 @@ public class DefaultController extends AristotleControllerTmpl {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public static ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
+        init();
         ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("title", properties.getProperty("site.title"));
         attachDebugObjects(modelAndView, request);
         return modelAndView;
     }
