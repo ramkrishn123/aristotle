@@ -2,7 +2,12 @@ package ca.luscinia.aristotle.controller;
 
 import ca.luscinia.aristotle.model.Student;
 import ca.luscinia.aristotle.model.Teacher;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public abstract class AuthenticatedControllerTmpl extends AristotleControllerTmpl{
@@ -24,5 +29,8 @@ public abstract class AuthenticatedControllerTmpl extends AristotleControllerTmp
             return 'e'; // authentication error
         }
         return 'a';
+    }
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
+        return new ModelAndView("login");
     }
 }

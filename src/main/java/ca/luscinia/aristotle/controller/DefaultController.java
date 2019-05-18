@@ -33,11 +33,13 @@ import java.util.Properties;
 public class DefaultController extends AristotleControllerTmpl {
 
 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public static ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
         init();
         ModelAndView modelAndView = new ModelAndView("index");
-        modelAndView.addObject("title", properties.getProperty("site.title"));
+        //TODO: implement properties file
+        modelAndView.addObject("title", "Aristotle Education Platform");
         attachDebugObjects(modelAndView, request);
         return modelAndView;
     }

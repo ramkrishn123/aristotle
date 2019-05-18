@@ -22,6 +22,7 @@ import ca.luscinia.aristotle.model.Login;
 import ca.luscinia.aristotle.model.Student;
 import ca.luscinia.aristotle.model.Teacher;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -32,13 +33,13 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class LoginController extends AristotleControllerTmpl{
 
-    @RequestMapping(value = "/signin/", method = RequestMethod.GET)
-    public static String loginform(HttpServletRequest request, HttpServletResponse response) {
-        return "login";
+    @RequestMapping(value = "/login/", method = RequestMethod.GET)
+    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
+        return new ModelAndView("login");
     }
 
     @RequestMapping(value = "/login/process/", method = RequestMethod.POST)
-    public static ModelAndView loginprocess(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response) {
         Login login = new Login(request.getAttribute("username").toString(), request.getAttribute("password").toString());
         Student student = new Student();
         Teacher teacher = new Teacher();

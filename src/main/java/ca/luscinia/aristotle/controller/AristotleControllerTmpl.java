@@ -5,14 +5,15 @@ import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.time.Instant;
 import java.util.Date;
 import java.util.Properties;
 
 public abstract class AristotleControllerTmpl {
 
-    static Properties properties;
-    private static void init() {
+    public Properties properties;
+    public void init() {
         try {
             properties = new GetPropertyValues().getPropValues();
         } catch (Exception e) {
@@ -20,7 +21,7 @@ public abstract class AristotleControllerTmpl {
         }
     }
 
-    private static void attachDebugObjects(ModelAndView modelAndView, HttpServletRequest request) {
+    public void attachDebugObjects(ModelAndView modelAndView, HttpServletRequest request) {
         modelAndView.addObject("output", "SAMPLE TEXT FROM CONTROLLER OUTPUT");
         if (request.getSession() != null) {
             modelAndView.addObject("SessionID", request.getSession().getId());
@@ -31,4 +32,5 @@ public abstract class AristotleControllerTmpl {
         modelAndView.addObject("Host", request.getHeader("Host"));
         modelAndView.addObject("UserAgent", request.getHeader("User-Agent"));
     }
+    abstract ModelAndView index(HttpServletRequest request, HttpServletResponse response);
 }
