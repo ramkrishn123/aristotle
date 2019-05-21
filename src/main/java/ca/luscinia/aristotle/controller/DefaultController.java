@@ -19,7 +19,6 @@
 package ca.luscinia.aristotle.controller;
 
 
-import ca.luscinia.aristotle.GetPropertyValues;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,20 +26,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Properties;
 
 @Controller
 public class DefaultController extends AristotleControllerTmpl {
 
 
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
-        init();
-        ModelAndView modelAndView = new ModelAndView("index");
-        //TODO: implement properties file
-        modelAndView.addObject("title", "Aristotle Education Platform");
-        attachDebugObjects(modelAndView, request);
-        return modelAndView;
-    }
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
+		init();
+		ModelAndView modelAndView = new ModelAndView("index");
+		attachDebugObjects(modelAndView, request);
+		return modelAndView;
+	}
 }

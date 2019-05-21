@@ -21,49 +21,49 @@ package ca.luscinia.aristotle.model;
 import org.json.JSONObject;
 
 public class Student extends User {
-    private int gradYear;
-    private int[] proficiencies;
-    private int[] styles;
-    private String passwordResetKey;
-    private JSONObject metadata;
+	private int gradYear;
+	private int[] proficiencies;
+	private int[] styles;
+	private String passwordResetKey;
+	private JSONObject metadata;
 
-    public void setGradYear(int gradYear) {
-        this.gradYear = gradYear;
-    }
+	public int getGradYear() {
+		return gradYear;
+	}
 
-    public int getGradYear() {
-        return gradYear;
-    }
+	public void setGradYear(int gradYear) {
+		this.gradYear = gradYear;
+	}
 
-    public void setProficiencies(int[] proficiencies) {
-        this.proficiencies = proficiencies;
-    }
+	public int[] getProficiencies() {
+		return proficiencies;
+	}
 
-    public int[] getProficiencies() {
-        return proficiencies;
-    }
+	public void setProficiencies(int[] proficiencies) {
+		this.proficiencies = proficiencies;
+	}
 
-    public void setStyles(int[] styles) {
-        this.styles = styles;
-    }
+	public int[] getStyles() {
+		return styles;
+	}
 
-    public int[] getStyles() {
-        return styles;
-    }
+	public void setStyles(int[] styles) {
+		this.styles = styles;
+	}
 
-    public void setPasswordResetKey(String passwordResetKey) {
-        this.passwordResetKey = passwordResetKey;
-    }
+	public String getPasswordResetKey() {
+		return passwordResetKey;
+	}
 
-    public String getPasswordResetKey() {
-        return passwordResetKey;
-    }
+	public void setPasswordResetKey(String passwordResetKey) {
+		this.passwordResetKey = passwordResetKey;
+	}
 
-    public void setMetadata(JSONObject metadata) {
-        this.metadata = metadata;
-    }
+	public JSONObject getMetadata() {
+		return metadata;
+	}
 
-    public JSONObject getMetadata() {
-        return metadata;
-    }
+	public void setMetadata(JSONObject metadata) {
+		this.metadata = metadata;
+	}
 }
