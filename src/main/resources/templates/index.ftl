@@ -1,9 +1,7 @@
+<#include "head.ftl">
+<#include "header.ftl">
 <h1>
-    ${output}<br />
+    ${output}<br/>
 </h1>
-<p>
-    ${SessionID}<br />
-    ${Time}<br />
-    ${Host}<br />
-    ${UserAgent}<br />
-</p>
+<#include "debug.ftl">
+<#include "footer.ftl">
