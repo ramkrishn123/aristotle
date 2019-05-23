@@ -9,12 +9,26 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- script: docker build -t aristotle . && docker run -p 80:8080 --name aristotle aristotle 
-  displayName: build and run docker image
-
-- script: |
-    curl localhost:80/
-    curl localhost:80/login/
-    curl localhost:80/register
-  displayName: 'check basic pages'
+steps: 
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    sonarQubeRunAnalysis: false
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Microsoft Azure Sponsorship(07689912-2f49-45bb-9c5b-32ce916bf1e4)'
+    appType: 'functionAppContainer'
+    WebAppName: 
+    deployToSlotOrASE: true
+    SlotName: 'production'
+    enableCustomDeployment: true
+    DeploymentType: 'webDeploy'
