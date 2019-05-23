@@ -22,13 +22,8 @@ steps:
 - task: DockerInstaller@0
   inputs:
     dockerVersion: '17.09.0-ce'
-- task: AzureRmWebAppDeployment@4
+- task: AzureFunctionAppContainer@1
   inputs:
-    ConnectionType: 'AzureRM'
     azureSubscription: 'Microsoft Azure Sponsorship(07689912-2f49-45bb-9c5b-32ce916bf1e4)'
-    appType: 'functionAppContainer'
-    WebAppName: 
-    deployToSlotOrASE: true
-    SlotName: 'production'
-    enableCustomDeployment: true
-    DeploymentType: 'webDeploy'
+    appName: 'aristotle-app'
+    imageName: 'aristotle'
