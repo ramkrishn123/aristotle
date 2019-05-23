@@ -26,9 +26,9 @@ steps:
   inputs:
     command: 'build'
     Dockerfile: '**/Dockerfile'
-    - task: Delay@1
-      inputs:
-        delayForMinutes: '1'
+- task: Delay@1
+  inputs:
+    delayForMinutes: '1'
 - task: AzureWebAppContainer@1
   inputs:
     azureSubscription: 'Microsoft Azure Sponsorship(07689912-2f49-45bb-9c5b-32ce916bf1e4)'
