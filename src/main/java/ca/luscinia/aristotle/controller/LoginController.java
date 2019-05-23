@@ -38,6 +38,7 @@ public class LoginController extends AristotleControllerTmpl {
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView modelAndView = new ModelAndView("login");
 		modelAndView.addObject("email", "user@example.com");
+		addHeadInfo(modelAndView);
 		return modelAndView;
 	}
 
@@ -78,6 +79,7 @@ public class LoginController extends AristotleControllerTmpl {
 			modelAndView.addObject("error", login.processError());
 			request.getSession().invalidate();
 		}
+		addHeadInfo(modelAndView);
 		return modelAndView;
 
 	}
