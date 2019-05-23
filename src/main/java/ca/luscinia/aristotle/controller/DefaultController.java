@@ -36,6 +36,16 @@ public class DefaultController extends AristotleControllerTmpl {
 		init();
 		ModelAndView modelAndView = new ModelAndView("index");
 		attachDebugObjects(modelAndView, request);
+		addHeadInfo(modelAndView);
+		return modelAndView;
+	}
+
+	@RequestMapping(value = "/debug", method = RequestMethod.GET)
+	public ModelAndView debug(HttpServletRequest request, HttpServletResponse response) {
+		init();
+		ModelAndView modelAndView = new ModelAndView("index");
+		attachDebugObjects(modelAndView, request);
+		addHeadInfo(modelAndView);
 		return modelAndView;
 	}
 }

@@ -18,9 +18,6 @@
 
 package ca.luscinia.aristotle.controller;
 
-import ca.luscinia.aristotle.model.Login;
-import ca.luscinia.aristotle.model.Student;
-import ca.luscinia.aristotle.model.Teacher;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,7 +26,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Enumeration;
 
 @Controller
 public class RegistrationController extends AristotleControllerTmpl {
@@ -37,6 +33,7 @@ public class RegistrationController extends AristotleControllerTmpl {
 	@RequestMapping(value = "/register/", method = RequestMethod.GET)
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView modelAndView = new ModelAndView("login");
+		addHeadInfo(modelAndView);
 		modelAndView.addObject("email", "user@example.com");
 		return modelAndView;
 	}
@@ -51,7 +48,9 @@ public class RegistrationController extends AristotleControllerTmpl {
 	                                 @RequestParam("password") String password,
                                      @RequestParam("verify") String verify
 	) {
-		
+
+
+		return null;
 
 	}
 }

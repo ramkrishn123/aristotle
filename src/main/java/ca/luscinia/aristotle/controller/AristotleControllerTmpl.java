@@ -28,11 +28,11 @@ public abstract class AristotleControllerTmpl {
 	}
 
 	public void addHeadInfo(ModelAndView modelAndView) {
+		init();
 		modelAndView.addObject("title", properties.getProperty("site.title"));
 		modelAndView.addObject("author", properties.get("site.author"));
 		modelAndView.addObject("description", properties.getProperty("site.description"));
 		modelAndView.addObject("url", properties.getProperty("site.url"));
-
 	}
 
 	public void attachDebugObjects(ModelAndView modelAndView, HttpServletRequest request) {
