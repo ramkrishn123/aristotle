@@ -21,7 +21,7 @@ package ca.luscinia.aristotle.model;
 public class Login {
 	private String username;
 	private String password;
-	private String validate;
+	private String validate = "student";
 
 	public Login() {
 	}

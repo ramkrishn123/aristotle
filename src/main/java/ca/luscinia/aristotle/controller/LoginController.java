@@ -24,10 +24,12 @@ import ca.luscinia.aristotle.model.Teacher;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Enumeration;
 
 @Controller
 public class LoginController extends AristotleControllerTmpl {
@@ -40,8 +42,27 @@ public class LoginController extends AristotleControllerTmpl {
 	}
 
 	@RequestMapping(value = "/login/process/", method = RequestMethod.POST)
-	public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response) {
-		Login login = new Login(request.getAttribute("email").toString(), request.getAttribute("password").toString());
+	public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
+	                                 @RequestParam("username") String username,
+	                                 @RequestParam("password") String password
+	) {
+
+		Login login = new Login();
+		try {
+			login.setUsername(username);
+			login.setPassword(password);
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+			ModelAndView modelAndView = new ModelAndView("plaintext");
+			String out = "";
+			Enumeration<String> AttrNames = request.getAttributeNames();
+			while (AttrNames.hasMoreElements())
+				out += AttrNames.nextElement() + "\n";
+			out += "\t" + username + "\n\t" + password;
+			modelAndView.addObject("headers", out);
+			return modelAndView;
+		}
+
 		Student student = new Student();
 		Teacher teacher = new Teacher();
 		ModelAndView modelAndView = new ModelAndView();
@@ -58,5 +79,6 @@ public class LoginController extends AristotleControllerTmpl {
 			request.getSession().invalidate();
 		}
 		return modelAndView;
+
 	}
 }
