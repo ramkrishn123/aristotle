@@ -22,8 +22,12 @@ steps:
 - task: DockerInstaller@0
   inputs:
     dockerVersion: '17.09.0-ce'
-- task: AzureFunctionAppContainer@1
+- task: Docker@2
+  inputs:
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+- task: AzureWebAppContainer@1
   inputs:
     azureSubscription: 'Microsoft Azure Sponsorship(07689912-2f49-45bb-9c5b-32ce916bf1e4)'
     appName: 'aristotle-app'
-    imageName: 'aristotle'
+    containers: 'aristotle:latest'
