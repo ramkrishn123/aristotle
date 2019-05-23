@@ -18,5 +18,40 @@
 
 package ca.luscinia.aristotle.controller;
 
-public class RegistrationController {
+import ca.luscinia.aristotle.model.Login;
+import ca.luscinia.aristotle.model.Student;
+import ca.luscinia.aristotle.model.Teacher;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.Enumeration;
+
+@Controller
+public class RegistrationController extends AristotleControllerTmpl {
+
+	@RequestMapping(value = "/register/", method = RequestMethod.GET)
+	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView modelAndView = new ModelAndView("login");
+		modelAndView.addObject("email", "user@example.com");
+		return modelAndView;
+	}
+
+	@RequestMapping(value = "/register/process/", method = RequestMethod.POST)
+	public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
+	                                 @RequestParam("username") String username,
+	                                 @RequestParam("firstName") String firstName,
+	                                 @RequestParam("lastName") String lastName,
+	                                 @RequestParam("classCode") String classCode,
+	                                 @RequestParam("classKey") String classKey,
+	                                 @RequestParam("password") String password,
+                                     @RequestParam("verify") String verify
+	) {
+		
+
+	}
 }

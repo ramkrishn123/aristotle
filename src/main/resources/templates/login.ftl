@@ -1,3 +1,5 @@
+<#include "head.ftl">
+<#include "header.ftl">
 <h1> Login Form </h1>
 <form action="/login/process/" method="post">
     <table>
@@ -24,3 +26,4 @@
         </tr>
     </table>
 </form>
+<#include "footer.ftl">
