@@ -9,11 +9,10 @@
                     <h1>
                         ${output}<br/>
                     </h1>
+                    <#include "debug.ftl">
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<#include "debug.ftl">
 <#include "footer.ftl">
