@@ -1,4 +1,4 @@
-${SessionID}<br/>
-${Time}<br/>
-${Host}<br/>
-${UserAgent}<br/>
+${SessionID}<br />
+${Time}<br />
+${Host}<br />
+${UserAgent}<br />
