@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  dockerId: varunpatel01
+  imageName: aristotle
+
 steps: 
 - task: Maven@3
   inputs:
@@ -26,6 +30,12 @@ steps:
   inputs:
     command: 'build'
     Dockerfile: '**/Dockerfile'
+- script: |
+    docker build -t $(dockerId)/$(imageName) .
+    docker login -u $(dockerId) -p $(pswd)
+    docker push $(dockerId)/$(imageName)
+  env:
+    pswd: $(dockerPassword)
 - task: AzureWebAppContainer@1
   inputs:
     azureSubscription: 'Microsoft Azure Sponsorship(07689912-2f49-45bb-9c5b-32ce916bf1e4)'
