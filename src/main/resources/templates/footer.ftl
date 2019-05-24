@@ -22,14 +22,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script>
 <script src="/js/plugins/bootstrap-selectpicker.js"></script>
 <script src="/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
-<script>
-    $(document).ready(function () {
-        // Javascript method's body can be found in assets/js/demos.js
-        md.initDashboardPageCharts();
-
-    });
-</script>
 </body>
-
 </html>
 
