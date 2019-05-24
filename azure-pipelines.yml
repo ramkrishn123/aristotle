@@ -32,7 +32,7 @@ steps:
     Dockerfile: '**/Dockerfile'
 - script: |
     docker build -t $(dockerId)/$(imageName) .
-    docker login -u $(dockerId) -p $(dockerPassword)
+    docker login -u $(dockerId) -p $env:dockerPassword
     docker push $(dockerId)/$(imageName)
 - task: AzureWebAppContainer@1
   inputs:
