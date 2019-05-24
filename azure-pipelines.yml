@@ -23,6 +23,7 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     sonarQubeRunAnalysis: false
+
 - task: DockerInstaller@0
   inputs:
     dockerVersion: '17.09.0-ce'
@@ -31,16 +32,17 @@ steps:
   inputs:
     containerRegistry: 'dockerhub'
     command: 'login'
+
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerhub'
     repository: 'varunpatel01/aristotle'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: '$(Build.BuildId)-azure-pipelines'
+    tags: 'azure-pipeline'
 
 - task: AzureWebAppContainer@1
   inputs:
     azureSubscription: 'Microsoft Azure Sponsorship(07689912-2f49-45bb-9c5b-32ce916bf1e4)'
     appName: 'aristotle-app'
-    containers: 'aristotle:latest'
+    containers: 'varunpatel01/aristotle:azure-pipeline'
