@@ -19,57 +19,63 @@
 package ca.luscinia.aristotle.model;
 
 public class Login {
-    private String username;
-    private String password;
-    private String validate;
+	private String username;
+	private String password;
+	private String validate = "student";
 
-    public Login(){}
-    public Login(String username, String password) {
-        username = this.username;
-        password = this.password;
-    }
-    public void validate(User user) {
-        validate = "Student";
-    }
-    public boolean isStudent(Student student) {
-        return this.validate.toLowerCase().equals("student");
-    }
-    public boolean isTeacher(Teacher teacher) {
-        return this.validate.toLowerCase().equals("teacher");
-    }
-    public String processError() {
-        if (validate == null) {
-            return "Incorrect Username and/or Password";
-        }
-        return "An Unknown Error Occurred";
-    }
+	public Login() {
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public Login(String username, String password) {
+		username = this.username;
+		password = this.password;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public void validate(User user) {
+		validate = "Student";
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public boolean isStudent(Student student) {
+		return this.validate.toLowerCase().equals("student");
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public boolean isTeacher(Teacher teacher) {
+		return this.validate.toLowerCase().equals("teacher");
+	}
 
-    public void setValidate(String validate) {
-        this.validate = validate;
-    }
+	public String processError() {
+		if (validate == null) {
+			return "Incorrect Username and/or Password";
+		}
+		return "An Unknown Error Occurred";
+	}
 
-    public String getValidate() {
-        return validate;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    @Override
-    public String toString() {
-        return getUsername() + ", " + getPassword() + ", error:\"" + getValidate() + "\"";
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getValidate() {
+		return validate;
+	}
+
+	public void setValidate(String validate) {
+		this.validate = validate;
+	}
+
+	@Override
+	public String toString() {
+		return getUsername() + ", " + getPassword() + ", error:\"" + getValidate() + "\"";
+	}
 }

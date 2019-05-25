@@ -19,22 +19,71 @@
 package ca.luscinia.aristotle.model;
 
 public abstract class User {
-    private boolean authenticated;
-    private long index;
-    private String firstName;
-    private String lastName;
-    private long[] courses;
-    private String email;
-    private String passwordHash;
+	private boolean authenticated;
+	private long index;
+	private String firstName;
+	private String lastName;
+	private long[] courses;
+	private String email;
+	private String passwordHash;
 
-    public User() {
-        authenticated = false;
-    }
+	public User() {
+		authenticated = false;
+	}
 
-    public void setAuthenticated(boolean authenticated) {
-        this.authenticated = authenticated;
-    }
-    public boolean isAuthenticated() {
-        return authenticated;
-    }
+	public boolean isAuthenticated() {
+		return authenticated;
+	}
+
+	public void setAuthenticated(boolean authenticated) {
+		this.authenticated = authenticated;
+	}
+
+	public long getIndex() {
+		return index;
+	}
+
+	public void setIndex(long index) {
+		this.index = index;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public long[] getCourses() {
+		return courses;
+	}
+
+	public void setCourses(long[] courses) {
+		this.courses = courses;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPasswordHash() {
+		return passwordHash;
+	}
+
+	public void setPasswordHash(String passwordHash) {
+		this.passwordHash = passwordHash;
+	}
 }
