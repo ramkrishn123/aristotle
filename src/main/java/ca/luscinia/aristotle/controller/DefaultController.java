@@ -36,6 +36,7 @@ public class DefaultController extends AristotleControllerTmpl {
 		ModelAndView modelAndView = new ModelAndView("index");
 		addHeadInfo(modelAndView);
 		attachDebugObjects(modelAndView, request);
+		modelAndView.addObject("page", "Home");
 		return modelAndView;
 	}
 
@@ -44,6 +45,7 @@ public class DefaultController extends AristotleControllerTmpl {
 		ModelAndView modelAndView = new ModelAndView("index");
 		addHeadInfo(modelAndView);
 		attachDebugObjects(modelAndView, request);
+		modelAndView.addObject("Debug");
 		return modelAndView;
 	}
 }
