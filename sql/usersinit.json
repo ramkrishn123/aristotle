@@ -1,0 +1,26 @@
+{
+    "id": "1",
+    "firstName": "luscinia",
+    "lastName": "webmaster",
+    "type": "Administrator",
+    "email": "webmaster@luscinia.ca",
+    "password": "",
+    "classes": ["0"],
+    "proficiencies": {
+        "A": 100,
+        "B": 100,
+        "C": 100,
+        "D": 100,
+        "E": 100,
+    },
+    "activity": {
+        "1": {
+            "timestamp": 0, 
+            "acvtivityPoints": 0, 
+            "sessionID": "68B787D739A84CDFBC6B504B3FA703EA",
+            "deviceMetadata": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0",
+        },           
+    },
+    "metadata": {},
+    "passwordResetKey": ""
+}
