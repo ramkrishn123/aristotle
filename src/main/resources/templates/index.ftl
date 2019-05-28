@@ -1,4 +1,4 @@
-<#include "head.ftl">
+<#include "assets/head.ftl">
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -6,9 +6,9 @@
                     <h1>
                         ${output}<br/>
                     </h1>
-                    <#include "debug.ftl">
+                    <#include "assets/debug.ftl">
                 </div>
             </div>
         </div>
     </div>
-<#include "footer.ftl">
+<#include "assets/footer.ftl">

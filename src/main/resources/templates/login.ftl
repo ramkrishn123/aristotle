@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
-<#include "head.ftl">
+<#include "assets/head.ftl">
 <body>
 <div class="wrapper">
-    <#include "sidebar.ftl">
+    <#include "assets/sidebar.ftl">
     <div class="main-panel">
-        <#include "navbar.ftl">
+        <#include "assets/navbar.ftl">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
@@ -46,9 +46,9 @@
                 </div>
             </div>
         </div>
-        <#include "footer.ftl">
+        <#include "assets/footer.ftl">
     </div>
 </div>
-<#include "scripts.ftl">
+<#include "assets/scripts.ftl">
 </body>
 </html>
