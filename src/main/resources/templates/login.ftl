@@ -39,7 +39,7 @@
                                     </span>
                             </div>
                             <div class="card-footer justify-content-center">
-                                <input type="submit" class="btn btn-outline-info btn-link btn-lg">
+                                <input type="submit" class="btn btn-outline-info btn-link" value="Log In">
                             </div>
                         </div>
                     </form>
