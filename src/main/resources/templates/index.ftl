@@ -8,8 +8,8 @@
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
     <#include "assets/navbar.ftl">
-    <main role="main" class="inner cover mainContainer">
-        <h1 class="cover-heading">Aristotle</h1>
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Aristotle Education Platform</h1>
         <p class="lead">
             Aristotle is an online education platform currently in development by Varun Patel and Milan Bumbulovic
         </p>

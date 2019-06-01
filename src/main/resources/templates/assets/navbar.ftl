@@ -1,6 +1,5 @@
 <!-- NAVBAR -->
 <header>
-    <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="/">Aristotle Education Platform</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -28,7 +27,9 @@
                     <a class="nav-link" href="/about.html">About</a>
                 </li>
             </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" href="/login">Sign In</button>
+            <a href="/login/">
+                <button class="btn btn-outline-success my-2 my-sm-0">Sign In</button>
+            </a>
         </div>
     </nav>
 </header>
