@@ -1,71 +1,37 @@
-<h1> Registration Form </h1>
-<form action="/register/process/" method="post">
-    <table>
-        <tr>
-            <td>
-                <label>Email: </label>
-            </td>
-            <td>
-                <input type="email" name="username" value="${email}"/> <br/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>First Name: </label>
-            </td>
-            <td>
-                <input type="text" name="firstName"/> <br/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>Last Name: </label>
-            </td>
-            <td>
-                <input type="text" name="lastName"/> <br/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>Class Code: </label>
-            </td>
-            <td>
-                <input type="text" name="classCode"/> <br/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>Class Key: </label>
-            </td>
-            <td>
-                <input type="text" name="classKey"/> <br/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>Password: </label>
-            </td>
-            <td>
-                <input type="password" name="password"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>Confirm Password: </label>
-            </td>
-            <td>
-                <input type="password" name="verify"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="g-recaptcha" data-sitekey="6LeRPm0UAAAAAGKMTS6xq1MtCgh_KBtPLisCkdx6"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="submit" value="Log In"/>
-            </td>
-        </tr>
-    </table>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head
+<#include "assets/head.ftl">
+<link rel="stylesheet" href="/css/auth.css"/>
+</head>
+<body>
+<form class="form-signin" action="/login/process/" method="post">
+    <div class="text-center mb-4">
+        <img class="mb-4" src="/favicon.png" alt="Luscinia Logo" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
+    </div>
+    <div class="form-label-group">
+        <input type="email" id="username" class="form-control" placeholder="Email address" required autofocus>
+        <label for="username">Email Address</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="password" class="form-control" placeholder="Password" required>
+        <label for="password">Password</label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted text-center">
+        Copyright &copy;
+        <script>
+            document.write(new Date().getFullYear())
+        </script>
+        <br />
+        <a href="https://www.luscinia.ca/">
+            Luscinia Enterprises Assn
+        </a>.
+        All Rights Reserved.<br />
+        Full Source Available under GPLv3 License
+    </p>
 </form>
+</body>
+</html>
