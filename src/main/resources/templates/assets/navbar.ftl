@@ -1,64 +1,34 @@
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-    <div class="container-fluid">
-        <div class="navbar-wrapper">
-            <#if page??>
-                ${page}
-            </#if>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/">Aristotle Education Platform</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons">notifications</i>
-                        <#if notificationsQuantity??>
-                            <span class="notification">
-                                            ${notificationsQuantity}
-                                     </span>
-                        </#if>
-                        <p class="d-lg-none d-md-block">
-                            Some Actions
-                        </p>
-                    </a>
-                    <#if notifications??>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <#list notifications as n>
-                                <a class="dropdown-item" href="#">${n}</a>
-                            </#list>
-                        </div>
-                    </#if>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="/">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons">person</i>
-                        <p class="d-lg-none d-md-block">
-                            Account
-                        </p>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                        <#if user??>
-                            <a class="dropdown-item" href="/profile/">Profile</a>
-                            <a class="dropdown-item" href="/settings/">Settings</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/logout/">Log out</a>
-                        <#else>
-                            <a class="dropdown-item" href="/login/">Log In</a>
-                            <a class="dropdown-item" href="/register/">Register</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/support/">Support</a>
-                        </#if>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/methodology.html">Methodology</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/teachers.html">Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/students.html">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/parents.html">Parents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
                 </li>
             </ul>
+            <button class="btn btn-outline-success my-2 my-sm-0" href="/login">Sign In</button>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>

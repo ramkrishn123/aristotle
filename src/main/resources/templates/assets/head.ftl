@@ -1,22 +1,55 @@
 <!-- HEAD -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="${description}">
-    <meta name="author" content="${author}">
-    <title>
-        <#if title??>
-            ${title}
-        <#else>
-            Aristotle Education
-        </#if>
-    </title>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link href="/css/material-dashboard.css?v=2.1.1" rel="stylesheet"/>
-</head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible"
+      content="IE=edge">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta name="description"
+      content="Aristotle is an educational platform provided by Luscinia Enterprises Assn. A B.C. Registered Non-Profit Organisation">
+<meta name="author"
+      content="Varun Patel <varun@varunpatel.ca">
+
+<title><#if title??>${title}<#else>Aristotle Education Platform</#if></title>
+
+<link rel="icon"
+      type="image/png"
+      href="/favicon.png">
+
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css"
+      integrity="sha256-X/mlyZAafJ8j5e74pWh4+qNUD1zurCvLA6hODVobQX0="
+      crossorigin="anonymous"/>
+
+<script defer async
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"
+        integrity="sha256-GYcdwXot2kSaBb8kr9o8zDKYBwQ1PCkugjcCYFQS+IA="
+        crossorigin="anonymous">
+</script>
+<script defer async
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+</script>
+<script defer async
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"
+        integrity="sha256-1XfFQxRfNvDJW3FdZ+xlo2SbodG2+rFArw6XsVzu3bc="
+        crossorigin="anonymous">
+</script>
+<script defer async
+        src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.21.0/feather.min.js"
+        integrity="sha256-qBd447qJjlY5iM+wziRXC/fp1ZS/VF7b0pXn8iANAps="
+        crossorigin="anonymous">
+</script>
+<script defer async
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw="
+        crossorigin="anonymous">
+</script>
+
+<script defer async>
+    feather.replace()
+</script>

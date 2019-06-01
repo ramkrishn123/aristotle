@@ -1,37 +1,18 @@
 <!-- FOOTER -->
-<footer class="footer">
-    <div class="container-fluid">
-        <nav class="float-left">
-            <ul>
-                <li>
-                    <a href="https://luscinia.ca">
-                        Luscinia
-                    </a>
-                </li>
-                <li>
-                    <a href="/about-us/">
-                        About Us
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/varun-patel/aristotle">
-                        GitHub
-                    </a>
-                </li>
-                <li>
-                    <a href="/licenses/">
-                        Licenses
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright float-right">
-            &copy;
+<footer class="mastfoot mt-auto">
+    <div class="inner">
+        <p>
+            Copyright &copy;
             <script>
                 document.write(new Date().getFullYear())
             </script>
-        </div>
+            <a href="https://www.luscinia.ca/">
+                Luscinia Enterprises Assn
+            </a>.
+            All Rights Reserved.
+        </p>
+        <p>
+            Full Source Available under GPLv3 License
+        </p>
     </div>
 </footer>
-
-
