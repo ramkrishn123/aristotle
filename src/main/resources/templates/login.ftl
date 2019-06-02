@@ -11,12 +11,12 @@
         <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
     </div>
     <div class="form-label-group">
-        <input type="email" id="username" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="username" class="form-control" placeholder="Email address" name="username" required autofocus>
         <label for="username">Email Address</label>
     </div>
 
     <div class="form-label-group">
-        <input type="password" id="password" class="form-control" placeholder="Password" required>
+        <input type="password" id="password" class="form-control" placeholder="Password" name="password" required>
         <label for="password">Password</label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
