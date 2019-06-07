@@ -38,6 +38,14 @@ public class RegistrationController extends AristotleControllerTmpl {
 		return modelAndView;
 	}
 
+	@RequestMapping(value = "/register/student", method = RequestMethod.POST)
+	public ModelAndView rStudent(@RequestParam("classCode") int classCode,  HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView modelAndView = new ModelAndView("registerstudent");
+		addHeadInfo(modelAndView);
+		modelAndView.addObject("classCode", classCode);
+		return modelAndView;
+	}
+
 	@RequestMapping(value = "/register/process/", method = RequestMethod.POST)
 	public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
 	                                 @RequestParam("username") String username,

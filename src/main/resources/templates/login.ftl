@@ -13,7 +13,7 @@
     <div class="form-label-group">
         <input type="email" id="username" class="form-control" placeholder="Email address" name="username" required autofocus>
         <label for="username">Email Address</label>
-    </div>
+    </div>if
 
     <div class="form-label-group">
         <input type="password" id="password" class="form-control" placeholder="Password" name="password" required>
@@ -21,7 +21,7 @@
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <div class="text-center">
-        <a href="/register-branch.html">Register Now</a>
+        <a href="/register/branch.html">Register Now</a>
     </div>
     <p class="mt-5 mb-3 text-muted text-center">
         Copyright &copy;
@@ -30,8 +30,8 @@
         </script>
         <br />
         <a href="https://www.luscinia.ca/">
-            Luscinia Enterprises Assn
-        </a>.
+            Luscinia Enterprises Assn.
+        </a>
         All Rights Reserved.<br />
         Full Source Available under GPLv3 License
     </p>

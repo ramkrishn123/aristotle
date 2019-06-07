@@ -11,14 +11,14 @@
 <meta name="author"
       content="Varun Patel <varun@varunpatel.ca">
 
-<title><#if title??>${title}<#else>Aristotle Education Platform</#if></title>
+<title>Aristotle Education Platform</title>
 
 <link rel="icon"
       type="image/png"
       href="/favicon.png">
 
 <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+      href="https://fonts.googleapis.com/css?family=Roboifto:300,400,500,700|Material+Icons">
 <link rel="stylesheet"
       href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
       integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
@@ -30,7 +30,7 @@
         crossorigin="anonymous"></script>
 <script defer async
         src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXififVWP+kJQ1lwFAOkcUOysnlKJC33U"
         crossorigin="anonymous"></script>
 <script defer async
         src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
